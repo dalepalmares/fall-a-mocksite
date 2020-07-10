@@ -13,6 +13,7 @@
     "autoprefixer": "^9.8.4",
     "jquery": "^3.5.1",
     "postcss-cli": "^7.1.1",
+    "tailwindcss": "^1.4.6",
     "waypoints": "^4.0.1"
   }
 }
