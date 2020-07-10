@@ -1,0 +1,151 @@
+@tailwind base;
+
+@tailwind components;
+
+@tailwind utilities;
+
+.border-slide:after {
+  display: block;
+  content: "";
+  border-bottom: solid 3px #fff;
+  transform: scaleX(0);
+  transition: transform 250ms ease-in-out;
+  transform-origin: 0% 50%;
+}
+.border-slide:hover:after {
+  transform: scaleX(1);
+}
+.blog-contents,
+.page-contents {
+  top: 2.3rem;
+  left: -0.5rem;
+  visibility: hidden;
+  opacity: 0;
+}
+.blog-dropdown,
+.page-dropdown,
+.code-dropdown {
+  position: relative;
+  display: inline;
+}
+.blog-dropdown:hover .blog-contents {
+  visibility: visible;
+  opacity: 1;
+}
+.blog-dropdown:hover .border-slide:after {
+  transform: scaleX(1);
+}
+.page-dropdown:hover .page-contents {
+  visibility: visible;
+  opacity: 1;
+}
+.page-dropdown:hover .border-slide:after {
+  transform: scaleX(1);
+}
+.code-contents {
+  top: 2.3rem;
+  right: 0rem;
+  visibility: hidden;
+  opacity: 0;
+}
+.code-dropdown:hover .code-contents {
+  visibility: visible;
+  opacity: 1;
+}
+.code-dropdown:hover .border-slide:after {
+  transform: scaleX(1);
+}
+.hero-img {
+  z-index: -99;
+}
+.hero-img img {
+  filter: brightness(50%);
+}
+
+.second-img {
+  height: 20rem;
+}
+
+.continue {
+  display: none;
+}
+.title-container:hover .continue {
+  display: flex;
+}
+.title-container:hover .title {
+  border-bottom: solid 1px white;
+}
+
+.meter {
+  height: 20px; /* Can be anything */
+  position: relative;
+  background: #555;
+  -moz-border-radius: 25px;
+  -webkit-border-radius: 25px;
+  border-radius: 25px;
+  padding: 10px;
+  box-shadow: inset 0 -1px 1px rgba(255, 255, 255, 0.3);
+}
+
+.progress {
+  justify-content: flex-start;
+  border-radius: 100px;
+  align-items: center;
+  position: relative;
+  padding: 0 5px;
+  display: flex;
+  height: 30px;
+  width: 380px;
+}
+
+.progress-value {
+  box-shadow: 0 10px 40px -10px #fff;
+  border-radius: 100px;
+  height: 20px;
+  width: 0;
+}
+.first-bar.start {
+  animation: bar1 3.5s normal forwards;
+}
+.second-bar.start {
+  animation: bar2 3.5s normal forwards;
+}
+.third-bar.start {
+  animation: bar3 3.5s normal forwards;
+}
+.fourth-bar.start {
+  animation: bar4 3.5s normal forwards;
+}
+
+@keyframes bar1 {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 20%;
+  }
+}
+@keyframes bar2 {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 30%;
+  }
+}
+@keyframes bar3 {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 15%;
+  }
+}
+@keyframes bar4 {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 100%;
+  }
+}
